@@ -50,7 +50,7 @@
       width: 70%;
     }
 
-    .margins {
+    .left-margins {
       position: fixed;
       top: 0;
       background-color: #333333;
@@ -58,15 +58,20 @@
       height: 100%;
       width: 15%;
       font-size: 1.5vw;
-    }
-
-    #left-margin {
       left: 0;
     }
 
-    #right-margin {
+    .right-margins{
+      position: absolute;
+      top: 0;
+      background-color: #333333;
+      z-index: 1;
+      height: fit-content%;
+      width: 15%;
+      font-size: 1.5vw;
       right: 0;
     }
+
 
     #homepage-leftside-content {
       position: relative;
@@ -74,6 +79,13 @@
       width: 80%;
       left: 10%;
       text-align: center;
+    }
+
+    #curator-feed-default-feed-layout {
+      position: absolute;
+      width: 80%;
+      left: 10%;
+      right: 10%;
     }
 
 
@@ -85,7 +97,7 @@
 </head>
 <body>
 
-  <div class = "margins" id = "left-margin">
+  <div class = "left-margins">
     <aside id = "homepage-leftside-content">
       <h2 id = "help">Help</h2>
       <nav id = "left-nav">
@@ -100,14 +112,15 @@
     </aside>
   </div>
 
-  <div class = "margins" id = "right-margin">
-    <p>Place social media feed here</p>
-  </div>
 
   <div id = "title" class = "main-content">
     <h1> &#x1F339; Solidarity at Swat &#x1F339;</h1>
   </div>
 
+  <div class = "right-margins">
+    <h2>Social Media Feed</h2>
+    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag"></div>
+  </div>
 
   <div id = "website-navbar">
     <nav>
@@ -147,5 +160,15 @@
     <h2 class = "main-content-header">Contact Us</h2>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
   </div>
+
+  <script type="text/javascript">
+  /* curator-feed-default-feed-layout */
+  (function(){
+  var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+  i.src="https://cdn.curator.io/published/7713c4b4-0c19-47b2-83c6-7f7570ea16b2.js";
+  e=d.getElementsByTagName(s)[0];
+  e.parentNode.insertBefore(i, e);
+  })();
+  </script>
 </body>
 </html>
