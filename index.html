@@ -16,22 +16,22 @@
     }
 
     h2 {
-      font-size: 3vw;
+      font-size: 2.7vw;
     }
 
     body {
       display: flex;
       align-items: center;
       flex-direction: column;
+      background-color: pink;
     }
 
     .main-content {
       width: 70%;
     }
 
-    .left-margin {
+    .margins {
       position: fixed;
-      left: 0;
       top: 0;
       background-color: #333333;
       z-index: 1;
@@ -40,28 +40,34 @@
       font-size: 1.5vw;
     }
 
-
-
-    /* #homepage-leftside-navbar {
-      position: fixed;
+    #left-margin {
       left: 0;
-      top: 15%;
-      width: 9%;
-      background-color: #333333;
-      z-index: 1;
-      line-height: 300%;
+    }
+
+    #right-margin {
+      right: 0;
+    }
+
+    #homepage-leftside-content {
+      position: relative;
+      background-color: #0F52BA;
+      width: 80%;
+      left: 10%;
       text-align: center;
-      margin-left: 3%;
-    } */
+    }
+
+
+
+
 
   </style>
 </head>
 <body>
 
-  <div class = "left-margin">
-    <aside>
-      <h2>Help</h2>
-      <nav id = "homepage-leftside-navbar">
+  <div class = "margins" id = "left-margin">
+    <aside id = "homepage-leftside-content">
+      <h2 = id = "help">Help</h2>
+      <nav id = "left-nav">
         <ul>
           <li><a href="#our-mission">Our Mission</a></li>
           <li><a href="#our-goals">Current Goals</a></li>
@@ -73,7 +79,7 @@
     </aside>
   </div>
 
-  <div id = "homepage-rightside-feed">
+  <div class = "margins" id = "right-margin">
     <p>Place social media feed here</p>
   </div>
 
