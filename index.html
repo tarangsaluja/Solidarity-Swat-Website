@@ -15,14 +15,30 @@
       color: red;
     }
 
+    body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
 
+    .main-content {
+      width: 70%;
+    }
+
+    .margins {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 15%
+      auto;
+      height: 100%;
+      background-color: #f1f1f1;
+      z-index: 1;
+    }
 
   </style>
 </head>
 <body>
-  <div id = "title" class = "main-content">
-    <h1> &#x1F339; Solidarity at Swat &#x1F339;</h1>
-  </div>
 
   <div class = "margins" id = "homepage-leftside-navbar">
     <aside>
@@ -39,9 +55,14 @@
     </aside>
   </div>
 
-  <div class = "margins" id = "homepage-rightside-feed">
+  <div id = "homepage-rightside-feed">
     <p>Place social media feed here</p>
   </div>
+
+  <div id = "title" class = "main-content">
+    <h1> &#x1F339; Solidarity at Swat &#x1F339;</h1>
+  </div>
+
 
   <div id = "website-navbar">
     <nav>
