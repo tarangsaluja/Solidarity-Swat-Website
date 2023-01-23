@@ -5,7 +5,7 @@
   <title>Solidarity at Swat</title>
   <style>
 
-    /* Style the Title of The Website */
+    /* Styling for HTML components */
     h1 {
     color: brown;
     font-family: 'Fancy Font', cursive;
@@ -17,7 +17,6 @@
       transition: color 0.4s;
     }
 
-    /*Styling for H2 */
     h2 {
       color: brown;
       font-size: 2.7vw;
@@ -28,41 +27,39 @@
     }
 
     body {
-      background-color: pink;
+      display: flex;
+      flex-direction: row;
     }
+
 
     /*Set up flexbox for the body*/
     content {
       display: flex;
       align-items: center;
-      flex-direction: row;
+      flex-direction: column;
+      background-color: pink;
     }
 
-    .left-margins {
-      flex: 0 0 15%; /* take up 15% of the width */
+   /*set up the right margin*/
+    .right-margins {
+      flex: 0 0 20%; /* take up 15% of the width */
       background-color: #333333;
       z-index: 1;
       font-size: 1.5vw;
     }
 
+  /*set up the first .85 of the screen */
     .central {
-      flex: 0 0 85%;
+      flex: 0 0 80%;
     }
 
-    nav {
-      display: flex; /* to center the content inside nav element */
-      align-items: center; /* center the content vertically */
-      justify-content: center; /* center the content horizontally */
-    }
-
-    nav ul {
-      list-style-type: none; /* remove bullet points */
-      text-align: center; /* align text in center of container */
-    }
-
+  /*navigation bar styling*/
     .main-content-nav {
       margin-left: 5%;
       margin-right: 5%;
+      margin-bottom: 5%;
+
+      /*set up flexbox so the entire screen distributed */
       display: flex;
     }
 
@@ -75,22 +72,28 @@
       padding-top: 3%;
       padding-left: 3%;
       padding-right: 3%;
-      font-size: 1.75vw;
+      margin-left: 1%;
+      margin-right: 1%;
+      font-size: 1.8vw;
 
+      /*center the text within each nav item*/
       display: grid;
       place-items: center;
       text-align: center;
 
     }
 
+    /*style navbar when hover*/
     .nav-item:hover {
       background-color: white;
       color: red;
-      font-size: 1.8vw;
-      transform: scale(1.1);
-      border: solid 2px black;
+      font-size: 2vw;
+      /* transform: scale(1.1); */
+      border: solid 1px black;
     }
 
+
+    /*style body sections and when you hover */
     .main-content {
       margin-bottom: 2%;
       margin-top: 2%;
@@ -99,6 +102,7 @@
       padding-bottom: 3%;
       left: 10%;
       right: 10%;
+      font-size: 1.7vw;
     }
 
     .main-content:hover {
@@ -106,13 +110,13 @@
       -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      color: red;
+      color: brown;
       opacity: 0.8;
       border: 5px solid black;
       border-radius: 20px;
-      transform: scale(1.1);
     }
 
+    /*Style text and headers within main content*/
     .main-content h2{
       text-align: center;
     }
@@ -122,9 +126,20 @@
       margin-right: 3%;
     }
 
+    /*Style icon placement*/
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon{
+      flex: 1;
+      text-align: center;
+    }
 
 
-
+    /*Hard code additional margins for rightside and contact information*/
     #homepage-leftside-content {
       position: relative;
       background-color: #0F52BA;
@@ -133,7 +148,9 @@
       text-align: center;
     }
 
-
+    #contact-us{
+      margin-bottom: 5%;
+    }
 
   </style>
 </head>
@@ -143,20 +160,6 @@
 
 
   <content>
-    <div class = "left-margins">
-      <!-- <aside id = "homepage-leftside-content">
-        <h2 id = "help">Help</h2>
-        <nav id = "left-nav">
-          <ul>
-            <li><a href="#our-mission">Our Mission</a></li>
-            <li><a href="#our-goals">Current Goals</a></li>
-            <li><a href="#our-history">Our History</a></li>
-            <li><a href="#labor-info">Labor News and History</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
-          </ul>
-        </nav>
-      </aside> -->
-    </div>
 
     <div class = "central">
       <div id = "title" class = "title">
@@ -164,9 +167,8 @@
       </div>
 
       <div class = "main-content-nav">
-        <div class="nav-item">Detailed History</div>
+        <div class="nav-item">Campaigns</div>
         <div class="nav-item">Radio Show Episodes</div>
-        <div class="nav-item">Communications with Campus</div>
         <div class="nav-item">Articles</div>
       </div>
 
@@ -175,21 +177,18 @@
           <div class = "main-content-text">
             <p>
               We are members of the Swarthmore Community organizing for improved labor conditions, such as higher wages, improved working conditions, and better employee benefits, at Swarthmore College.
-              As a hub for labor organizing activity at Swarthmore College, Solidarity at Swat will advocate and organize for student, staff members, and faculty who want want to see improved labor conditions.
+              As a hub for labor organizing activity at Swarthmore College, Solidarity at Swat will advocate and organize for students, staff members, and faculty who want want to see improved labor conditions.
               We believe it is unacceptable for Swarthmore College to pay less than a living wage to any of its workers or deny benefits and services, such as health insurance or child care.
               If the administration chooses to hide behind technicalities and bureaucracy, we aim to force their hand.
               There is room for all who labor in Solidarity at Swat. Join us and fight for a world that realizes a guiding truth: "all labor has dignity" - Martin Luther King Jr.
             </p>
 
             <p>
-              We recognize that labor
-
+              We recognize that the exploitation of labor is intertwined with other forms of exploitation and oppression, and that
+              a labor movement is incomplete without a commitment to support all struggles for justice. Injustice anywhere is a threat
+              to justice everywhere, and we stand in solidarity with struggles which are anti-imperial, anti-colonial, feminist,
+              anti-racist, and for justice in general.
             </p>
-
-
-
-
-
           </div>
 
       </div>
@@ -197,36 +196,73 @@
       <div class = "main-content" id = "Current Goals">
         <h2 class = "main-content-header">Current Goals</h2>
           <div class = "main-content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+            <p>
+              We are currently organizing towards a 15 dollar minimum wage for student workers.  As our organization grows, current campaigns will be augmented
+              and more campaigns will be added.
+            </p>
           </div>
       </div>
 
 
       <div class = "main-content" id = "Our History">
-        <h2 class = "main-content-header">Our History</h2>
+        <h2 class = "main-content-header">Our History and Work</h2>
           <div class = "main-content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+            <p>
+                Solidarity at Swat was formed after an inspirational talk by John Braxton '70 in April 2022. During this talk organized by the
+                Swarthmore College Young Democratic Socialists of America, Braxton described his lifetime of organizing at the intersection of
+                peace, labor, and the environment. After his talk, he asked some students about what issue unites the entire student body, and thus
+                began the campaign for a $15 student worker minimum wage. With intention to build mass coalitions amongst various student groups,
+                the Young Democratic Socialists of America established Solidarity at Swat as a coalitional organization for labor issues at Swarthmore.
+
+                Please see the following links to learn more about our history and work:
+                <ul>
+                  <li>Campaign for a $15 Minimum Wage</li>
+                  <li>Swarthmore College Labor Radio Hour</li>
+                  <li>History of Other Events</li>
+                </ul>
+            </p>
           </div>
       </div>
 
-
-      <div class = "main-content" id = "Labor News and History">
-        <h2 class = "main-content-header">Labor News and History</h2>
-          <div class = "main-content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-          </div>
-      </div>
-
-
-      <div class = "main-content" id = "Contact Us">
+      <div class = "main-content" id = "contact-us">
         <h2 class = "main-content-header">Contact Us</h2>
-          <div class = "main-content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-          </div>
+        <div class = "icons">
+          <a href="https://www.instagram.com/solidarityatswat/" target="_blank" class = "icon">
+              <figure>
+                <img src="instagram.png" alt="Instagram Icon" width="50vw" height="50vw">
+                <figcaption>Instagram</figcaption>
+              </figure>
+          </a>
+
+          <a href="mailto:tarangsaluja17@gmail.com" target="_blank" class = "icon">
+            <figure>
+              <img src="email.png" alt="Email Icon" width="50vw" height="50vw">
+              <figcaption>Email</figcaption>
+            </figure>
+          </a>
+        </div>
       </div>
     </div>
 
   </content>
+
+  <div class = "right-margins">
+    <p>
+      test
+    </p>
+    <!-- <aside id = "homepage-leftside-content">
+      <h2 id = "help">Help</h2>
+      <nav id = "left-nav">
+        <ul>
+          <li><a href="#our-mission">Our Mission</a></li>
+          <li><a href="#our-goals">Current Goals</a></li>
+          <li><a href="#our-history">Our History</a></li>
+          <li><a href="#labor-info">Labor News and History</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+    </aside> -->
+  </div>
 
 
 
