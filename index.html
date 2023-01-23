@@ -4,26 +4,49 @@
   <meta charset="UTF-8">
   <title>Solidarity at Swat</title>
   <style>
+
+    /* Style the Title of The Website */
     h1 {
     color: brown;
     font-family: 'Fancy Font', cursive;
     text-align: center;
     font-size: 5vw;
-    transition: color 0.4s;
     }
-    h1:hover {
+    h1:hover{
       color: red;
+      transition: color 0.4s;
     }
 
+    /*Styling for H2 */
     h2 {
+      color: brown;
       font-size: 2.7vw;
+    }
+    h2:hover{
+      color: red;
+      transition: color 0.4s;
     }
 
     body {
+      background-color: pink;
+    }
+
+    /*Set up flexbox for the body*/
+    content {
       display: flex;
       align-items: center;
-      flex-direction: column;
-      background-color: pink;
+      flex-direction: row;
+    }
+
+    .left-margins {
+      flex: 0 0 15%; /* take up 15% of the width */
+      background-color: #333333;
+      z-index: 1;
+      font-size: 1.5vw;
+    }
+
+    .central {
+      flex: 0 0 85%;
     }
 
     nav {
@@ -37,40 +60,69 @@
       text-align: center; /* align text in center of container */
     }
 
-    nav ul li:hover {
-      color: white; /* change text color on hover */
-      background-color: #ADD8E6; /* change background color on hover */
-      font-size: 1.1em; /* increase font size on hover */
-      width: 200%;
-      height: 110%;
-      opacity: 0.7;
+    .main-content-nav {
+      margin-left: 5%;
+      margin-right: 5%;
+      display: flex;
+    }
+
+    .nav-item {
+      background-color: #FF69B4; /* set red background */
+      border: solid 1px white; /* set white border */
+      border-radius: 20px;
+      flex: 1; /* each item takes 1/4 of container width */
+      padding-bottom: 3%;
+      padding-top: 3%;
+      padding-left: 3%;
+      padding-right: 3%;
+      font-size: 1.75vw;
+
+      display: grid;
+      place-items: center;
+      text-align: center;
+
+    }
+
+    .nav-item:hover {
+      background-color: white;
+      color: red;
+      font-size: 1.8vw;
+      transform: scale(1.1);
+      border: solid 2px black;
     }
 
     .main-content {
-      width: 70%;
+      margin-bottom: 2%;
+      margin-top: 2%;
+      margin-right: 10%;
+      margin-left: 10%;
+      padding-bottom: 3%;
+      left: 10%;
+      right: 10%;
     }
 
-    .left-margins {
-      position: fixed;
-      top: 0;
-      background-color: #333333;
-      z-index: 1;
-      height: 100%;
-      width: 15%;
-      font-size: 1.5vw;
-      left: 0;
+    .main-content:hover {
+      background-color: white;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      color: red;
+      opacity: 0.8;
+      border: 5px solid black;
+      border-radius: 20px;
+      transform: scale(1.1);
     }
 
-    .right-margins{
-      position: absolute;
-      top: 0;
-      background-color: #333333;
-      z-index: 1;
-      height: fit-content%;
-      width: 15%;
-      font-size: 1.5vw;
-      right: 0;
+    .main-content h2{
+      text-align: center;
     }
+
+    .main-content-text{
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+
+
 
 
     #homepage-leftside-content {
@@ -81,85 +133,103 @@
       text-align: center;
     }
 
-    #curator-feed-default-feed-layout {
-      position: absolute;
-      width: 80%;
-      left: 10%;
-      right: 10%;
-    }
-
-
-
-
 
 
   </style>
 </head>
+
+
 <body>
 
-  <div class = "left-margins">
-    <aside id = "homepage-leftside-content">
-      <h2 id = "help">Help</h2>
-      <nav id = "left-nav">
-        <ul>
-          <li><a href="#our-mission">Our Mission</a></li>
-          <li><a href="#our-goals">Current Goals</a></li>
-          <li><a href="#our-history">Our History</a></li>
-          <li><a href="#labor-info">Labor News and History</a></li>
-          <li><a href="#contact-us">Contact Us</a></li>
-        </ul>
-      </nav>
-    </aside>
-  </div>
+
+  <content>
+    <div class = "left-margins">
+      <!-- <aside id = "homepage-leftside-content">
+        <h2 id = "help">Help</h2>
+        <nav id = "left-nav">
+          <ul>
+            <li><a href="#our-mission">Our Mission</a></li>
+            <li><a href="#our-goals">Current Goals</a></li>
+            <li><a href="#our-history">Our History</a></li>
+            <li><a href="#labor-info">Labor News and History</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+      </aside> -->
+    </div>
+
+    <div class = "central">
+      <div id = "title" class = "title">
+        <h1> &#x1F339; Solidarity at Swat &#x1F339;</h1>
+      </div>
+
+      <div class = "main-content-nav">
+        <div class="nav-item">Detailed History</div>
+        <div class="nav-item">Radio Show Episodes</div>
+        <div class="nav-item">Communications with Campus</div>
+        <div class="nav-item">Articles</div>
+      </div>
+
+      <div class = "main-content" id = "Who">
+        <h2 class = "main-content-header">Who We Are</h2>
+          <div class = "main-content-text">
+            <p>
+              We are members of the Swarthmore Community organizing for improved labor conditions, such as higher wages, improved working conditions, and better employee benefits, at Swarthmore College.
+              As a hub for labor organizing activity at Swarthmore College, Solidarity at Swat will advocate and organize for student, staff members, and faculty who want want to see improved labor conditions.
+              We believe it is unacceptable for Swarthmore College to pay less than a living wage to any of its workers or deny benefits and services, such as health insurance or child care.
+              If the administration chooses to hide behind technicalities and bureaucracy, we aim to force their hand.
+              There is room for all who labor in Solidarity at Swat. Join us and fight for a world that realizes a guiding truth: "all labor has dignity" - Martin Luther King Jr.
+            </p>
+
+            <p>
+              We recognize that labor
+
+            </p>
 
 
-  <div id = "title" class = "main-content">
-    <h1> &#x1F339; Solidarity at Swat &#x1F339;</h1>
-  </div>
-
-  <div class = "right-margins">
-    <h2>Social Media Feed</h2>
-    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag"></div>
-  </div>
-
-  <div id = "website-navbar">
-    <nav>
-      <ul>
-        <li><a href="#detailed-history">Detailed History</a></li>
-        <li><a href="#radio-show-episodes">Radio Show Episodes</a></li>
-        <li><a href="#communications">Communications</a></li>
-        <li><a href="#articles">Articles</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class = "main-content" id = "Our Mission">
-    <h2 class = "main-content-header">Our Mission</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-  </div>
-
-  <div class = "main-content" id = "Current Goals">
-    <h2 class = "main-content-header">Current Goals</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-  </div>
 
 
-  <div class = "main-content" id = "Our History">
-    <h2 class = "main-content-header">Our History</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-  </div>
+
+          </div>
+
+      </div>
+
+      <div class = "main-content" id = "Current Goals">
+        <h2 class = "main-content-header">Current Goals</h2>
+          <div class = "main-content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+          </div>
+      </div>
 
 
-  <div class = "main-content" id = "Labor News and History">
-    <h2 class = "main-content-header">Labor News and History</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-  </div>
+      <div class = "main-content" id = "Our History">
+        <h2 class = "main-content-header">Our History</h2>
+          <div class = "main-content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+          </div>
+      </div>
 
 
-  <div class = "main-content" id = "Contact Us">
-    <h2 class = "main-content-header">Contact Us</h2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
-  </div>
+      <div class = "main-content" id = "Labor News and History">
+        <h2 class = "main-content-header">Labor News and History</h2>
+          <div class = "main-content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+          </div>
+      </div>
+
+
+      <div class = "main-content" id = "Contact Us">
+        <h2 class = "main-content-header">Contact Us</h2>
+          <div class = "main-content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere a ipsum euismod consequat. Phasellus sagittis molestie metus, a aliquet eros pretium at. Proin mattis, elit ut malesuada hendrerit, lacus ligula posuere lectus, in pellentesque magna purus eu nunc. Integer lobortis fringilla ex, ac posuere massa suscipit id. Donec volutpat lacus nec tortor hendrerit, ac varius leo ultricies. Nunc vitae semper ipsum. Nam fringilla sem nec ultrices sodales. Duis interdum, lacus vitae facilisis congue, nulla nibh egestas neque, vitae tempus sem ligula elementum ligula.
+          </div>
+      </div>
+    </div>
+
+  </content>
+
+
+
 
   <script type="text/javascript">
   /* curator-feed-default-feed-layout */
